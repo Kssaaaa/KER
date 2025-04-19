@@ -43,7 +43,9 @@
 					"${project}/Startup/startup_ch32v30x_D8.S",
 					"${project}/Driver/i2c_Sofe",
 					"${project}/Driver/inc/oledfont.h",
-					"${project}/Driver/inc/codetab.h"
+					"${project}/Driver/inc/codetab.h",
+					"${project}/Driver/inc/Driver_I2C2.h",
+					"${project}/Driver/src/Driver_I2C2.c"
 				],
 				"riscvTargetProcessor": {
 					"architecture": "rv32i",
@@ -610,7 +612,7 @@
 		"address": "0x08000000",
 		"target_path": "obj\\CH32V307VCT6.hex",
 		"clkSpeed": "High",
-		"debug_interface_mode": "1-wire serial",
+		"debug_interface_mode": "",
 		"erase": true,
 		"program": true,
 		"verify": true,

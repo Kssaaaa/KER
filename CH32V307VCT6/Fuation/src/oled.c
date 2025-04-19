@@ -1,7 +1,7 @@
 #include "oled.h"
 #include "word.h"
 
-#include "Driver_I2C2.h"
+#include "Driver_I2C2_Hard.h"
 #include "string.h"
 #include "math.h"
 

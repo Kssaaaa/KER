@@ -5,7 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Driver/src/Driver_I2C2.c \
+../Driver/src/Driver_I2C2_Hard.c \
 ../Driver/src/Driver_Key.c \
 ../Driver/src/Driver_LED.c \
 ../Driver/src/Driver_TIM1.c \
@@ -15,7 +15,7 @@ C_SRCS += \
 ../Driver/src/Driver_USART.c 
 
 C_DEPS += \
-./Driver/src/Driver_I2C2.d \
+./Driver/src/Driver_I2C2_Hard.d \
 ./Driver/src/Driver_Key.d \
 ./Driver/src/Driver_LED.d \
 ./Driver/src/Driver_TIM1.d \
@@ -25,7 +25,7 @@ C_DEPS += \
 ./Driver/src/Driver_USART.d 
 
 OBJS += \
-./Driver/src/Driver_I2C2.o \
+./Driver/src/Driver_I2C2_Hard.o \
 ./Driver/src/Driver_Key.o \
 ./Driver/src/Driver_LED.o \
 ./Driver/src/Driver_TIM1.o \
