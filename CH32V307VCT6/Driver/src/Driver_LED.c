@@ -5,20 +5,20 @@
 ?*/
 void Driver_LED_Init(void)
 {
-     /* 1. 打开GPIOA的时钟 */
-     RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+      /* 1. 打开GPIOA的时钟 */
+      RCC->APB2PCENR |= APB2PERIPH_BASE;
 
-     /* 2. 给用到的端口的所有 PIN (PA0 PA1 PA8) 设置工作模式: 通用推挽输出 MODE:11 ?CNF:00 */
-     GPIOA->CRL |= (GPIO_CRL_MODE0 | GPIO_CRL_MODE1);
-     GPIOA->CRL &= ~(GPIO_CRL_CNF0 | GPIO_CRL_CNF1);
+      /* 2. 给用到的端口的所有 PIN (PA0 PA1 PA8) 设置工作模式: 通用推挽输出 MODE:11 ?CNF:00 */
+      GPIOA->CFGLR |= (GPIO_CFGLR_MODE0 | GPIO_CFGLR_MODE1);
+      GPIOA->CFGLR &= ~(GPIO_CFGLR_CNF0 | GPIO_CFGLR_CNF1);
 
-     GPIOA->CRH |= GPIO_CRH_MODE8;
-     GPIOA->CRH &= ~GPIO_CRH_CNF8;
+      GPIOA->CFGHR |= GPIO_CFGHR_MODE8;
+      GPIOA->CFGHR &= ~GPIO_CFGHR_CNF8;
 
-     /* 3. 关闭所有灯 ?*/
-     Drviver_LED_Off(LED_1);
-     Drviver_LED_Off(LED_2);
-     Drviver_LED_Off(LED_3);
+      /* 3. 关闭所有灯 */
+      Drviver_LED_Off(LED_1);
+      Drviver_LED_Off(LED_2);
+      Drviver_LED_Off(LED_3);
 }
 
 /**
@@ -27,8 +27,8 @@ void Driver_LED_Init(void)
 ?*/
 void Drviver_LED_On(uint32_t led)
 {
-     GPIOA->ODR &= ~led;
-}
+      GPIOA->OUTDR &= ~led;
+      }
 
 /**
 ?* @description: 关闭指定的LED
@@ -36,7 +36,7 @@ void Drviver_LED_On(uint32_t led)
 ?*/
 void Drviver_LED_Off(uint32_t led)
 {
-     GPIOA->ODR |= led;
+      GPIOA->OUTDR |= led;
 }
 
 /**
@@ -45,15 +45,15 @@ void Drviver_LED_Off(uint32_t led)
 ?*/
 void Drviver_LED_Toggle(uint32_t led)
 {
-     /* 1. 读取引脚的电平,如果是1(目前是关闭), 打开, 否则就关闭 */
-     if ((GPIOA->IDR & led) == 0)
-     {
-     Drviver_LED_Off(led);
-     }
-     else
-     {
-     Drviver_LED_On(led);
-     }
+      /* 1. 读取引脚的电平,如果是1(目前是关闭), 打开, 否则就关闭 */
+      if ((GPIOA->INDR & led) == 0)
+      {
+        Drviver_LED_Off(led);
+      }
+      else
+      {
+           Drviver_LED_On(led);
+      }
 }
 
 /**
@@ -64,10 +64,10 @@ void Drviver_LED_Toggle(uint32_t led)
 void Drviver_LED_OnAll(uint32_t leds[], uint8_t size)
 {
 
-    for (uint8_t i = 0; i < size; i++)
-     {
+      for (uint8_t i = 0; i < size; i++)
+      {
       Drviver_LED_On(leds[i]);
-    }
+      }
 }
 
 /**
@@ -77,8 +77,8 @@ void Drviver_LED_OnAll(uint32_t leds[], uint8_t size)
 ?*/
 void Drviver_LED_OffAll(uint32_t leds[], uint8_t size)
 {
-     for (uint8_t i = 0; i < size; i++)
-     {
-     Drviver_LED_Off(leds[i]);
-     }
+      for (uint8_t i = 0; i < size; i++)
+      {
+           Drviver_LED_Off(leds[i]);
+      }
 }
