@@ -42,8 +42,6 @@
 				"excludeResources": [
 					"${project}/Startup/startup_ch32v30x_D8.S",
 					"${project}/Driver/i2c_Sofe",
-					"${project}/Driver/src/oled.c",
-					"${project}/Driver/inc/oled.h",
 					"${project}/Driver/inc/oledfont.h",
 					"${project}/Driver/inc/codetab.h"
 				],
@@ -149,7 +147,8 @@
 							"${project}/Core",
 							"${project}/User",
 							"${project}/Peripheral/inc",
-							"${project}/Driver/inc"
+							"${project}/Driver/inc",
+							"${project}/Fuation/inc"
 						],
 						"include_system_paths": [],
 						"include_files": []

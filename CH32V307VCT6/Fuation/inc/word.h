@@ -1,5 +1,5 @@
-#ifndef __DOME_WORD_H
-#define __DOME_WORD_H
+#ifndef __WORD_H
+#define __WORD_H
 #include "ch32v30x.h"
 #include "debug.h"
 extern const unsigned char ChineseFont_128_64[][128];

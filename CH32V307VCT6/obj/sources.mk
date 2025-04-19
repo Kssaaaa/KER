@@ -25,8 +25,8 @@ SECONDARY_SIZE :=
 SUBDIRS := \
 Core \
 Debug \
-Driver/i2c_Hard \
 Driver/src \
+Fuation/src \
 Peripheral/src \
 Startup \
 User \

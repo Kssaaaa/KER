@@ -11,8 +11,8 @@ RM := rm -rf
 -include User/subdir.mk
 -include Startup/subdir.mk
 -include Peripheral/src/subdir.mk
+-include Fuation/src/subdir.mk
 -include Driver/src/subdir.mk
--include Driver/i2c_Hard/subdir.mk
 -include Debug/subdir.mk
 -include Core/subdir.mk
 -include subdir.mk

@@ -1,5 +1,5 @@
-#include "dome_oled.h"
-#include "dome_word.h"
+#include "oled.h"
+#include "word.h"
 
 #include "Driver_I2C2.h"
 #include "string.h"

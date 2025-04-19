@@ -1,5 +1,5 @@
-#ifndef __DOME_OLED_H
-#define __DOME_OLED_H
+#ifndef __OLED_H
+#define __OLED_H
 
 #include "ch32v30x.h"
 #include "debug.h"
