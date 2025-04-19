@@ -11,7 +11,9 @@ C_SRCS += \
 ../Driver/src/Driver_TIM4.c \
 ../Driver/src/Driver_TIM5.c \
 ../Driver/src/Driver_TIM6.c \
-../Driver/src/Driver_USART.c 
+../Driver/src/Driver_USART.c \
+../Driver/src/dome_oled.c \
+../Driver/src/dome_word.c 
 
 C_DEPS += \
 ./Driver/src/Driver_Key.d \
@@ -20,7 +22,9 @@ C_DEPS += \
 ./Driver/src/Driver_TIM4.d \
 ./Driver/src/Driver_TIM5.d \
 ./Driver/src/Driver_TIM6.d \
-./Driver/src/Driver_USART.d 
+./Driver/src/Driver_USART.d \
+./Driver/src/dome_oled.d \
+./Driver/src/dome_word.d 
 
 OBJS += \
 ./Driver/src/Driver_Key.o \
@@ -29,7 +33,9 @@ OBJS += \
 ./Driver/src/Driver_TIM4.o \
 ./Driver/src/Driver_TIM5.o \
 ./Driver/src/Driver_TIM6.o \
-./Driver/src/Driver_USART.o 
+./Driver/src/Driver_USART.o \
+./Driver/src/dome_oled.o \
+./Driver/src/dome_word.o 
 
 
 

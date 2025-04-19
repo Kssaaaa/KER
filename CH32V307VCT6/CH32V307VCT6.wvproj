@@ -41,7 +41,11 @@
 				"post_script_description": "",
 				"excludeResources": [
 					"${project}/Startup/startup_ch32v30x_D8.S",
-					"${project}/Driver/i2c_Sofe"
+					"${project}/Driver/i2c_Sofe",
+					"${project}/Driver/src/oled.c",
+					"${project}/Driver/inc/oled.h",
+					"${project}/Driver/inc/oledfont.h",
+					"${project}/Driver/inc/codetab.h"
 				],
 				"riscvTargetProcessor": {
 					"architecture": "rv32i",

@@ -5,11 +5,13 @@ f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/r
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(floatsidf.o)
                               ./Driver/src/Driver_TIM4.o (__floatsidf)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(save-restore.o)
-                              ./Peripheral/src/ch32v30x_flash.o (__riscv_save_7)
+                              ./Driver/src/dome_oled.o (__riscv_save_11)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(_clzsi2.o)
                               f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(divdf3.o) (__clzsi2)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(_clz.o)
                               f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(_clzsi2.o) (__clz_tab)
+f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-memset.o)
+                              ./Driver/src/dome_oled.o (memset)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-printf.o)
                               ./User/main.o (printf)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-puts.o)
@@ -28,8 +30,6 @@ f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/r
                               f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-fflush.o) (_global_impure_ptr)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-makebuf.o)
                               f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-wsetup.o) (__smakebuf_r)
-f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-memset.o)
-                              f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-findfp.o) (memset)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-nano-freer.o)
                               f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-wsetup.o) (_free_r)
 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-nano-mallocr.o)
@@ -1640,6 +1640,57 @@ Discarded input sections
  .text.Driver_USART1_ReceiveString
                 0x0000000000000000       0x2e ./Driver/src/Driver_USART.o
  .text.fputc    0x0000000000000000       0x20 ./Driver/src/Driver_USART.o
+ .text          0x0000000000000000        0x0 ./Driver/src/dome_oled.o
+ .data          0x0000000000000000        0x0 ./Driver/src/dome_oled.o
+ .bss           0x0000000000000000        0x0 ./Driver/src/dome_oled.o
+ .text.OLED_WR_Byte
+                0x0000000000000000       0x68 ./Driver/src/dome_oled.o
+ .text.OLED_Display_On
+                0x0000000000000000       0x38 ./Driver/src/dome_oled.o
+ .text.OLED_Display_Off
+                0x0000000000000000       0x38 ./Driver/src/dome_oled.o
+ .text.OLED_Clear
+                0x0000000000000000       0x5a ./Driver/src/dome_oled.o
+ .text.OLED_Draw_Point
+                0x0000000000000000       0x36 ./Driver/src/dome_oled.o
+ .text.OLED_SetCursorAddrese
+                0x0000000000000000       0x44 ./Driver/src/dome_oled.o
+ .text.OLED_Init
+                0x0000000000000000      0x1b4 ./Driver/src/dome_oled.o
+ .text.OLED_VerticalDisplay
+                0x0000000000000000       0x3a ./Driver/src/dome_oled.o
+ .text.OledScrollStop
+                0x0000000000000000       0x1e ./Driver/src/dome_oled.o
+ .text.OLED_PageClear
+                0x0000000000000000       0x4e ./Driver/src/dome_oled.o
+ .text.OLED_Refresh_Screen
+                0x0000000000000000       0x82 ./Driver/src/dome_oled.o
+ .text.Oled_Display
+                0x0000000000000000       0x78 ./Driver/src/dome_oled.o
+ .text.OLED_DisplayString
+                0x0000000000000000      0x406 ./Driver/src/dome_oled.o
+ .text.OLED_Menu_Display
+                0x0000000000000000       0x70 ./Driver/src/dome_oled.o
+ .bss.OLED_GRAM
+                0x0000000000000000      0x400 ./Driver/src/dome_oled.o
+ .rodata.OLED_Menu_Display.str1.4
+                0x0000000000000000       0x41 ./Driver/src/dome_oled.o
+ .debug_info    0x0000000000000000     0x15e8 ./Driver/src/dome_oled.o
+ .debug_abbrev  0x0000000000000000      0x30e ./Driver/src/dome_oled.o
+ .debug_loc     0x0000000000000000      0x6de ./Driver/src/dome_oled.o
+ .debug_aranges
+                0x0000000000000000       0x88 ./Driver/src/dome_oled.o
+ .debug_ranges  0x0000000000000000       0x78 ./Driver/src/dome_oled.o
+ .debug_line    0x0000000000000000      0xbdb ./Driver/src/dome_oled.o
+ .debug_str     0x0000000000000000      0x834 ./Driver/src/dome_oled.o
+ .comment       0x0000000000000000       0x34 ./Driver/src/dome_oled.o
+ .debug_frame   0x0000000000000000      0x1e0 ./Driver/src/dome_oled.o
+ .text          0x0000000000000000        0x0 ./Driver/src/dome_word.o
+ .data          0x0000000000000000        0x0 ./Driver/src/dome_word.o
+ .bss           0x0000000000000000        0x0 ./Driver/src/dome_word.o
+ .debug_line    0x0000000000000000        0x0 ./Driver/src/dome_word.o
+ .debug_str     0x0000000000000000       0xfb ./Driver/src/dome_word.o
+ .comment       0x0000000000000000       0x34 ./Driver/src/dome_word.o
  .text          0x0000000000000000        0x0 ./Driver/i2c_Hard/Driver_I2C2.o
  .data          0x0000000000000000        0x0 ./Driver/i2c_Hard/Driver_I2C2.o
  .bss           0x0000000000000000        0x0 ./Driver/i2c_Hard/Driver_I2C2.o
@@ -1768,6 +1819,8 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(_clz.o)
  .rodata.__clz_tab
                 0x0000000000000000      0x100 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imacxw/ilp32\libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-memset.o)
  .text          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-printf.o)
  .data          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-printf.o)
  .bss           0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-printf.o)
@@ -1818,8 +1871,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-makebuf.o)
  .data          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-makebuf.o)
  .bss           0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-makebuf.o)
- .data          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-memset.o)
- .bss           0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-memset.o)
  .text          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-nano-freer.o)
  .data          0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-nano-freer.o)
  .bss           0x0000000000000000        0x0 f:/mu/mounriver_studio2/resources/app/resources/win32/components/wch/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imacxw/ilp32\libg_nano.a(lib_a-nano-freer.o)
@@ -1965,6 +2016,8 @@ LOAD ./Driver/src/Driver_TIM4.o
 LOAD ./Driver/src/Driver_TIM5.o
 LOAD ./Driver/src/Driver_TIM6.o
 LOAD ./Driver/src/Driver_USART.o
+LOAD ./Driver/src/dome_oled.o
+LOAD ./Driver/src/dome_word.o
 LOAD ./Driver/i2c_Hard/Driver_I2C2.o
 LOAD ./Debug/debug.o
 LOAD ./Core/core_riscv.o

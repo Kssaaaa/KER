@@ -1,5 +1,6 @@
-Driver/i2c_Hard/Driver_I2C2.o: ../Driver/i2c_Hard/Driver_I2C2.c \
- f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_I2C2.h \
+Driver/src/oled.o: ../Driver/src/oled.c \
+ f:/Gtip/KER/CH32V307VCT6/Driver/inc/oled.h \
+ f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h \
  f:/Gtip/KER/CH32V307VCT6/Core/core_riscv.h \
  f:/Gtip/KER/CH32V307VCT6/User/system_ch32v30x.h \
@@ -27,11 +28,12 @@ Driver/i2c_Hard/Driver_I2C2.o: ../Driver/i2c_Hard/Driver_I2C2.c \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_usart.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_wwdg.h \
  f:/Gtip/KER/CH32V307VCT6/User/ch32v30x_it.h \
- f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h \
- f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_USART.h
+ f:/Gtip/KER/CH32V307VCT6/Driver/inc/oledfont.h
 
-f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_I2C2.h:
+f:/Gtip/KER/CH32V307VCT6/Driver/inc/oled.h:
+
+f:/Gtip/KER/CH32V307VCT6/Debug/debug.h:
 
 f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h:
 
@@ -87,8 +89,6 @@ f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_wwdg.h:
 
 f:/Gtip/KER/CH32V307VCT6/User/ch32v30x_it.h:
 
-f:/Gtip/KER/CH32V307VCT6/Debug/debug.h:
-
 f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h:
 
-f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_USART.h:
+f:/Gtip/KER/CH32V307VCT6/Driver/inc/oledfont.h:
