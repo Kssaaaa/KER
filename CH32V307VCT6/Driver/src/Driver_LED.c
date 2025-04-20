@@ -8,7 +8,7 @@ void Driver_LED_Init(void)
       /* 1. 打开GPIOA的时钟 */
       RCC->APB2PCENR |= APB2PERIPH_BASE;
 
-      /* 2. 给用到的端口的所有 PIN (PA0 PA1 PA8) 设置工作模式: 通用推挽输出 MODE:11 ?CNF:00 */
+      /* 2. 给用到的端口的所有 PIN (PA0 PA1 PA8) 设置工作模式: 通用推挽输出 MODE:11 CNF:00 */
       GPIOA->CFGLR |= (GPIO_CFGLR_MODE0 | GPIO_CFGLR_MODE1);
       GPIOA->CFGLR &= ~(GPIO_CFGLR_CNF0 | GPIO_CFGLR_CNF1);
 

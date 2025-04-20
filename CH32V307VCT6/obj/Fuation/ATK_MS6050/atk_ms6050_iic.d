@@ -1,4 +1,6 @@
-User/main.o: ../User/main.c f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
+Fuation/ATK_MS6050/atk_ms6050_iic.o: \
+ ../Fuation/ATK_MS6050/atk_ms6050_iic.c \
+ ../Fuation/ATK_MS6050/atk_ms6050_iic.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h \
  f:/Gtip/KER/CH32V307VCT6/Core/core_riscv.h \
  f:/Gtip/KER/CH32V307VCT6/User/system_ch32v30x.h \
@@ -26,11 +28,10 @@ User/main.o: ../User/main.c f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_usart.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_wwdg.h \
  f:/Gtip/KER/CH32V307VCT6/User/ch32v30x_it.h \
- f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h \
- f:/Gtip/KER/CH32V307VCT6/Fuation/inc/oled.h \
- f:/Gtip/KER/CH32V307VCT6/Fuation/inc/atk_ms6050.h
+ f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
+ f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h
 
-f:/Gtip/KER/CH32V307VCT6/Debug/debug.h:
+../Fuation/ATK_MS6050/atk_ms6050_iic.h:
 
 f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h:
 
@@ -86,8 +87,6 @@ f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_wwdg.h:
 
 f:/Gtip/KER/CH32V307VCT6/User/ch32v30x_it.h:
 
+f:/Gtip/KER/CH32V307VCT6/Debug/debug.h:
+
 f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h:
-
-f:/Gtip/KER/CH32V307VCT6/Fuation/inc/oled.h:
-
-f:/Gtip/KER/CH32V307VCT6/Fuation/inc/atk_ms6050.h:

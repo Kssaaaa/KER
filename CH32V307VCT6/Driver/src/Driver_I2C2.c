@@ -212,3 +212,45 @@ uint8_t Driver_I2C_ReadByte(void)
 
     return data;
 }
+
+/**
+ * @brief       IIC接收一个字节
+ * @param       ack: ack=1时，发送ack; ack=0时，发送nack
+ * @retval      接收到的数据
+ */
+uint8_t Driver_I2C_ReadByteAck(uint8_t ack)
+{
+    uint8_t data = 0;
+    for (uint8_t i = 0; i < 8; i++)
+    {
+        /* 1. 拉低scl */
+        SCL_LOW;
+        /* 2. 延时 */
+        I2C_DELAY;
+        /* 3. 拉高scl */
+        SCL_HIGH;
+        /* 4. 延时 */
+        I2C_DELAY;
+        /* 5. 读取sda */
+        data <<= 1;
+        if (READ_SDA)
+        {
+            data |= 0x01;
+        }
+        /* 6. 拉低scl */
+        SCL_LOW;
+
+        /* 7. 延时 */
+        I2C_DELAY;
+    }
+        if (ack == 0)
+    {
+        Driver_I2C2_NAck();
+    }
+    else
+    {
+        Driver_I2C2_Ack();
+    }
+
+    return data;
+}

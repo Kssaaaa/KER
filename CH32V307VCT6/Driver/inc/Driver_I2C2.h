@@ -35,6 +35,7 @@ uint8_t Driver_I2C2_WaitAck(void);
 void Driver_I2C_SendByte(uint8_t byte);
 
 uint8_t Driver_I2C_ReadByte(void);
+uint8_t Driver_I2C_ReadByteAck(uint8_t ack);
 
 #endif
 
