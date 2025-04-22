@@ -262,7 +262,7 @@
             </toolChain>
           </folderInfo>
           <sourceEntries>
-            <entry excluding="Startup/startup_ch32v30x_D8.S|Driver/i2c_Sofe|Driver/inc/oledfont.h|Driver/inc/codetab.h|Driver/inc/Driver_I2C2.h|Driver/src/Driver_I2C2.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+            <entry excluding="Startup/startup_ch32v30x_D8.S|Driver/i2c_Sofe|Driver/inc/oledfont.h|Driver/inc/codetab.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
           </sourceEntries>
         </configuration>
       </storageModule>

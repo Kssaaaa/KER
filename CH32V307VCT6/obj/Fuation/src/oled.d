@@ -30,7 +30,7 @@ Fuation/src/oled.o: ../Fuation/src/oled.c \
  f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h \
  f:/Gtip/KER/CH32V307VCT6/Fuation/inc/word.h \
- f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_I2C2_Hard.h \
+ f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_I2C2.h \
  f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_USART.h
 
 f:/Gtip/KER/CH32V307VCT6/Fuation/inc/oled.h:
@@ -95,6 +95,6 @@ f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h:
 
 f:/Gtip/KER/CH32V307VCT6/Fuation/inc/word.h:
 
-f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_I2C2_Hard.h:
+f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_I2C2.h:
 
 f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_USART.h:
