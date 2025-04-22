@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Fuation/src/atk_ms6050.c \
+../Fuation/src/esp32.c \
 ../Fuation/src/inv_mpu.c \
 ../Fuation/src/inv_mpu_dmp_motion_driver.c \
 ../Fuation/src/oled.c \
@@ -13,6 +14,7 @@ C_SRCS += \
 
 C_DEPS += \
 ./Fuation/src/atk_ms6050.d \
+./Fuation/src/esp32.d \
 ./Fuation/src/inv_mpu.d \
 ./Fuation/src/inv_mpu_dmp_motion_driver.d \
 ./Fuation/src/oled.d \
@@ -20,6 +22,7 @@ C_DEPS += \
 
 OBJS += \
 ./Fuation/src/atk_ms6050.o \
+./Fuation/src/esp32.o \
 ./Fuation/src/inv_mpu.o \
 ./Fuation/src/inv_mpu_dmp_motion_driver.o \
 ./Fuation/src/oled.o \

@@ -2883,10 +2883,10 @@ uint8_t atk_ms6050_dmp_init(void)
  *              1: º¯ÊýÖ´ÐÐÊ§°Ü
  */
 
- uint32_t GetTick(void) 
- {
-    return SysTick->CNT;
-}
+//  uint32_t GetTick(void) 
+//  {
+//     return SysTick->CNT;
+// }
 int atk_ms6050_get_clock_ms(unsigned long *count)
 {
     if (!count)

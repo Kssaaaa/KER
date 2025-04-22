@@ -50,6 +50,89 @@ void Driver_USART1_Init(void)
 }
 
 /**
+ * @description: 初始化串口2
+ */
+void Driver_USART2_Init(void)
+{
+    /* 1. 开启时钟 */
+    /* 1.1 串口1外设的时钟 */
+    RCC->APB2PCENR |= RCC_USART2EN;
+    /* 1.2 GPIO时钟 */
+    RCC->APB2PCENR |= RCC_IOPAEN;
+
+    /* 2. 配置GPIO引脚的工作模式  PA9=Tx(复用推挽 CNF=10 MODE=11)  PA10=Rx(浮空输入 CNF=01 MODE=00)*/
+    /* 2. 配置GPIO引脚的工作模式  PA2=Tx(复用推挽 CNF=10 MODE=11)  PA3=Rx(浮空输入 CNF=01 MODE=00)*/
+    GPIOA->CFGLR |= GPIO_CFGLR_CNF2_1;
+    GPIOA->CFGLR &= ~GPIO_CFGLR_CNF2_0;
+    GPIOA->CFGLR |= GPIO_CFGLR_MODE2;
+
+    GPIOA->CFGLR &= ~GPIO_CFGLR_CNF3_1;
+    GPIOA->CFGLR |= GPIO_CFGLR_CNF3_0;
+    GPIOA->CFGLR &= ~GPIO_CFGLR_MODE3;
+
+    /* 3. 串口的参数配置 */
+    /* 3.1 配置波特率 115200 */
+    USART2->BRR = 0x271;
+    /* 3.2 配置一个字的长度 8位 */
+    USART2->CTLR1 &= ~USART_CTLR1_M;
+    /* 3.3 配置不需要校验位 */
+    USART2->CTLR1 &= ~USART_CTLR1_PCE;
+    /* 3.4 配置停止位的长度 */
+    USART2->CTLR2 &= ~USART_CTLR2_STOP;
+    /* 3.5 使能接收和发送 */
+    USART2->CTLR1 |= USART_CTLR1_TE;
+    USART2->CTLR1 |= USART_CTLR1_RE;
+
+    /* 3.6 使能串口的各种中断 */
+    USART2->CTLR1 |= USART_CTLR1_RXNEIE; /* 接收非空中断 */
+    USART2->CTLR1 |= USART_CTLR1_IDLEIE; /* 空闲中断 */
+
+    /* 4. 配置NVIC */
+    NVIC_InitTypeDef        nvic_usart2;
+    nvic_usart2.NVIC_IRQChannel                    = USART1_IRQn;    // TIM3 中断
+    nvic_usart2.NVIC_IRQChannelPreemptionPriority  =  3;           // 优先级不用很高
+    nvic_usart2.NVIC_IRQChannelSubPriority         =  2;           // 优先级不用很高
+    nvic_usart2.NVIC_IRQChannelCmd                 = ENABLE;       // IRQ 通道使能
+
+    NVIC_Init(&nvic_usart2);
+    /* 4. 使能串口 */
+    USART2->CTLR1 |= USART_CTLR1_UE;
+}
+//使用官方库
+void USART2_UART_Init(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+    USART_InitTypeDef USART_InitStructure = {0};
+
+    /* 1. 使能时钟 */
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);  // USART2_TX(PA2), USART2_RX(PA3) 是 GPIOA
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE); // USART2 是 APB1 设备
+
+    /* 2. 配置 USART2 的 TX(PA2) 和 RX(PA3) */
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;          // TX (PA2)
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;    // 复用推挽输出
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;  // 高速
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;          // RX (PA3)
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; // 浮空输入
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    /* 3. 配置 USART2 参数 */
+    USART_InitStructure.USART_BaudRate = 115200;       // 波特率 115200
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b; // 8位数据
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;      // 1位停止位
+    USART_InitStructure.USART_Parity = USART_Parity_No;         // 无校验
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None; // 无硬件流控
+    USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx; // 发送+接收模式
+
+    USART_Init(USART2, &USART_InitStructure);          // 初始化 USART2
+
+    /* 4. 使能 USART2 */
+    USART_Cmd(USART2, ENABLE);
+}
+
+/**
  * @description: 发送一个字节
  * @param {uint8_t} byte 要发送的字节
  */
@@ -148,4 +231,34 @@ int fputc(int c, FILE *file)
 {
     Driver_USART1_SendChar(c);
     return c;
+}
+
+/**
+ * @brief 仿 HAL_UART_Transmit（阻塞式发送）
+ * @param USARTx: 串口外设（USART1, USART2...）
+ * @param pData: 待发送数据缓冲区
+ * @param Size: 数据长度
+ * @param Timeout: 超时时间（ms），HAL_MAX_DELAY（0xFFFFFFFF）表示无限等待
+ * @retval 无
+ */
+void UART_Transmit(USART_TypeDef* USARTx, uint8_t *pData, uint16_t Size, uint32_t Timeout)
+{
+    uint32_t startTick = GetTick();  // 获取当前系统时间（需自行实现 GetTick()）
+    
+    while (Size--)
+    {
+        USART_SendData(USARTx, *pData++);  // 发送一个字节
+        
+        // 等待发送完成（或超时）
+        while (USART_GetFlagStatus(USARTx, USART_FLAG_TXE) == RESET)
+        {
+            if (Timeout != HAL_MAX_DELAY)
+            {
+                if ((GetTick() - startTick) >= Timeout)
+                {
+                    return;  // 超时退出
+                }
+            }
+        }
+    }
 }

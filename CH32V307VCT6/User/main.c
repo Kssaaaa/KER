@@ -19,6 +19,9 @@
 */
 
 #include "debug.h"
+#include "Driver_USART.h"
+
+
 #include "oled.h"
 #include "atk_ms6050.h"
 /* Global typedef */
@@ -42,6 +45,8 @@ int main(void)
 	SystemCoreClockUpdate();
 	Delay_Init();
 	USART_Printf_Init(115200);	
+	Driver_USART2_Init();
+
 	int a =4, tem_Flag=4,GA_Flag=4,AX_Flag=4;
 	int16_t tem,gx,gy,gz,ax,ay,az;
 	a=atk_ms6050_init();
@@ -56,10 +61,10 @@ int main(void)
 	else{printf("mpu6050陀螺仪初始化失败");}
 	if(AX_Flag==0){printf("mpu6050加速度模块初始化成功");}
 	else{printf("mpu6050加速度初始化失败");}
+
 	while(1)
     {
-		printf("当前温度是%d/r/n",tem/100);
-		Delay_Ms(100);
+
 	}
 }
 

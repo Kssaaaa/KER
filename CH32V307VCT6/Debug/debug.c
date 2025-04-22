@@ -17,6 +17,51 @@ static uint16_t p_ms = 0;
 
 #define DEBUG_DATA0_ADDRESS  ((volatile uint32_t*)0xE0000380)
 #define DEBUG_DATA1_ADDRESS  ((volatile uint32_t*)0xE0000384)
+/*********************************************************************
+ * @fn      GetTick
+ *
+ * @brief   获取当前系统时间
+ *
+ * @return  none
+ */
+
+volatile uint32_t g_tickCount = 0;  // 全局变量，记录系统运行时间（ms）
+
+/**
+ * @brief SysTick 中断服务函数（1ms 中断一次）
+ */
+void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void SysTick_Handler(void)
+{
+    SysTick->SR = 0;  // 清除中断标志
+    g_tickCount++;     // 递增系统时间
+}
+
+/**
+ * @brief 获取当前系统时间（ms）
+ * @retval 当前时间（ms）
+ */
+uint32_t GetTick(void)
+{
+    return g_tickCount;
+}
+
+/**
+ * @brief 初始化 SysTick（1ms 中断）
+ */
+void SysTick_Init(void)
+{
+    SysTick->CTLR = 0;                   // 禁用 SysTick
+    SysTick->SR = 0;                      // 清除状态寄存器
+    SysTick->CNT = 0;                     // 清零计数器
+    SysTick->CMP = SystemCoreClock / 1000; // 1ms 中断（假设 SystemCoreClock = 72MHz）
+    SysTick->CTLR = 0xB;                  // 使能 SysTick（HCLK/8，自动重载，开启中断）
+    NVIC_EnableIRQ(SysTicK_IRQn);         // 使能 SysTick 中断
+}
+
+
+
+
 
 /*********************************************************************
  * @fn      Delay_Init
