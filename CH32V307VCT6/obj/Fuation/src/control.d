@@ -1,5 +1,5 @@
-Fuation/src/word.o: ../Fuation/src/word.c \
- f:/Gtip/KER/CH32V307VCT6/Fuation/inc/word.h \
+Fuation/src/control.o: ../Fuation/src/control.c \
+ f:/Gtip/KER/CH32V307VCT6/Fuation/inc/control.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h \
  f:/Gtip/KER/CH32V307VCT6/Core/core_riscv.h \
  f:/Gtip/KER/CH32V307VCT6/User/system_ch32v30x.h \
@@ -30,7 +30,7 @@ Fuation/src/word.o: ../Fuation/src/word.c \
  f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h
 
-f:/Gtip/KER/CH32V307VCT6/Fuation/inc/word.h:
+f:/Gtip/KER/CH32V307VCT6/Fuation/inc/control.h:
 
 f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h:
 

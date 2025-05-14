@@ -1,6 +1,5 @@
-Fuation/src/esp32.o: ../Fuation/src/esp32.c \
- f:/Gtip/KER/CH32V307VCT6/Fuation/inc/esp32.h \
- f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_USART.h \
+Driver/src/Driver_GPIO.o: ../Driver/src/Driver_GPIO.c \
+ f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_GPIO.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h \
  f:/Gtip/KER/CH32V307VCT6/Core/core_riscv.h \
  f:/Gtip/KER/CH32V307VCT6/User/system_ch32v30x.h \
@@ -31,9 +30,7 @@ Fuation/src/esp32.o: ../Fuation/src/esp32.c \
  f:/Gtip/KER/CH32V307VCT6/Debug/debug.h \
  f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x_misc.h
 
-f:/Gtip/KER/CH32V307VCT6/Fuation/inc/esp32.h:
-
-f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_USART.h:
+f:/Gtip/KER/CH32V307VCT6/Driver/inc/Driver_GPIO.h:
 
 f:/Gtip/KER/CH32V307VCT6/Peripheral/inc/ch32v30x.h:
 

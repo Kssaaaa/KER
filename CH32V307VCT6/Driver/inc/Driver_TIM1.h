@@ -3,8 +3,7 @@
 
 #include "ch32v30x.h"
 
-void Driver_TIM1_Init(void);
-void Driver_TIM1_Start(void);
-
+void TIM1_PWM_Init(void);
+void PWM_SetCompare(uint16_t Compare1,uint16_t Compare2,uint16_t Compare3,uint16_t Compare4);
 
 #endif

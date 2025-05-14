@@ -5,33 +5,24 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Driver/src/Driver_ADC.c \
+../Driver/src/Driver_GPIO.c \
 ../Driver/src/Driver_I2C2.c \
-../Driver/src/Driver_Key.c \
-../Driver/src/Driver_LED.c \
 ../Driver/src/Driver_TIM1.c \
-../Driver/src/Driver_TIM4.c \
-../Driver/src/Driver_TIM5.c \
-../Driver/src/Driver_TIM6.c \
 ../Driver/src/Driver_USART.c 
 
 C_DEPS += \
+./Driver/src/Driver_ADC.d \
+./Driver/src/Driver_GPIO.d \
 ./Driver/src/Driver_I2C2.d \
-./Driver/src/Driver_Key.d \
-./Driver/src/Driver_LED.d \
 ./Driver/src/Driver_TIM1.d \
-./Driver/src/Driver_TIM4.d \
-./Driver/src/Driver_TIM5.d \
-./Driver/src/Driver_TIM6.d \
 ./Driver/src/Driver_USART.d 
 
 OBJS += \
+./Driver/src/Driver_ADC.o \
+./Driver/src/Driver_GPIO.o \
 ./Driver/src/Driver_I2C2.o \
-./Driver/src/Driver_Key.o \
-./Driver/src/Driver_LED.o \
 ./Driver/src/Driver_TIM1.o \
-./Driver/src/Driver_TIM4.o \
-./Driver/src/Driver_TIM5.o \
-./Driver/src/Driver_TIM6.o \
 ./Driver/src/Driver_USART.o 
 
 

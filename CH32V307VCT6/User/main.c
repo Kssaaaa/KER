@@ -20,9 +20,6 @@
 
 #include "debug.h"
 #include "Driver_USART.h"
-
-
-#include "oled.h"
 #include "atk_ms6050.h"
 /* Global typedef */
 
