@@ -20,3 +20,4 @@ void Driver_GPIO_Init(void)
     GPIO_SetBits(GPIOA,GPIO_Pin_6);
 
 }
+

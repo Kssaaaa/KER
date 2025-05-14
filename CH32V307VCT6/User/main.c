@@ -41,8 +41,8 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	SystemCoreClockUpdate();
 	Delay_Init();
-	USART_Printf_Init(115200);	
-	Driver_USART2_Init();
+	//USART_Printf_Init(115200);	
+	Driver_USART1_Init();
 
 	int a =4, tem_Flag=4,GA_Flag=4,AX_Flag=4;
 	int16_t tem,gx,gy,gz,ax,ay,az;
@@ -61,7 +61,7 @@ int main(void)
 
 	while(1)
     {
-
+	atk_ms6050_get_gyroscope(&gx,&gy,&gz);
 	}
 }
 

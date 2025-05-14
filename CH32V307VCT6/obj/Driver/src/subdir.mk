@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Driver/src/Driver_ADC.c \
+../Driver/src/Driver_Encoder.c \
 ../Driver/src/Driver_GPIO.c \
 ../Driver/src/Driver_I2C2.c \
 ../Driver/src/Driver_TIM1.c \
@@ -13,6 +14,7 @@ C_SRCS += \
 
 C_DEPS += \
 ./Driver/src/Driver_ADC.d \
+./Driver/src/Driver_Encoder.d \
 ./Driver/src/Driver_GPIO.d \
 ./Driver/src/Driver_I2C2.d \
 ./Driver/src/Driver_TIM1.d \
@@ -20,6 +22,7 @@ C_DEPS += \
 
 OBJS += \
 ./Driver/src/Driver_ADC.o \
+./Driver/src/Driver_Encoder.o \
 ./Driver/src/Driver_GPIO.o \
 ./Driver/src/Driver_I2C2.o \
 ./Driver/src/Driver_TIM1.o \

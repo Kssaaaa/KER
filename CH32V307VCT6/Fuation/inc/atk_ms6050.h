@@ -26,7 +26,7 @@
 
 /* 引脚定义 */
 #define ATK_MS6050_AD0_GPIO_PORT            GPIOA
-#define ATK_MS6050_AD0_GPIO_PIN             GPIO_PIN_12
+#define ATK_MS6050_AD0_GPIO_PIN             GPIO_PIN_11
 /* PA15需禁用JTAG才能做普通IO */
 
 #define delay_ms Delay_Ms

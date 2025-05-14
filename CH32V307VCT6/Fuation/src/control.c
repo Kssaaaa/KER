@@ -143,3 +143,4 @@ void EnableDriver(FunctionalState state)
         GPIO_ResetBits(TB6612_STBY_GPIO_PORT, TB6612_STBY_PIN);
     }
 }
+

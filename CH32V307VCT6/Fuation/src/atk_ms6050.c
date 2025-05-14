@@ -48,15 +48,15 @@ static void atk_ms6050_hw_init(void)
      /* 1. 开启时钟 */
          //AD0->PA12
     /* 1.1  GPIOA*/
-    RCC->APB2PCENR |= RCC_IOPBEN;
+    RCC->APB2PCENR |= RCC_IOPAEN;
     /* 1.2  AFIO*/
     RCC->APB2PCENR |= RCC_AFIOEN;
 
-    /* 2. 给用到的端口的所有 PIN (PA12) 设置工作模式: 通用推挽输出 MODE:11 CNF:00 */
-    GPIOA->CFGHR |= GPIO_CFGHR_MODE12;
-    GPIOA->CFGHR &= ~GPIO_CFGHR_CNF12;
+    /* 2. 给用到的端口的所有 PIN (PA11) 设置工作模式: 通用推挽输出 MODE:11 CNF:00 */
+    GPIOA->CFGHR |= GPIO_CFGHR_MODE11;
+    GPIOA->CFGHR &= ~GPIO_CFGHR_CNF11;
     /* 3. AD0设置为低电平*/
-    GPIOA->OUTDR &= ~GPIO_OUTDR_ODR12;
+    GPIOA->OUTDR &= ~GPIO_OUTDR_ODR11;
 
 
 }
