@@ -6,24 +6,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Fuation/src/HJ_XJ7.c \
-../Fuation/src/atk_ms6050.c \
-../Fuation/src/control.c \
-../Fuation/src/inv_mpu.c \
-../Fuation/src/inv_mpu_dmp_motion_driver.c 
+../Fuation/src/control.c 
 
 C_DEPS += \
 ./Fuation/src/HJ_XJ7.d \
-./Fuation/src/atk_ms6050.d \
-./Fuation/src/control.d \
-./Fuation/src/inv_mpu.d \
-./Fuation/src/inv_mpu_dmp_motion_driver.d 
+./Fuation/src/control.d 
 
 OBJS += \
 ./Fuation/src/HJ_XJ7.o \
-./Fuation/src/atk_ms6050.o \
-./Fuation/src/control.o \
-./Fuation/src/inv_mpu.o \
-./Fuation/src/inv_mpu_dmp_motion_driver.o 
+./Fuation/src/control.o 
 
 
 

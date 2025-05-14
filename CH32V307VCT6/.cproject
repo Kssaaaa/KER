@@ -262,7 +262,7 @@
             </toolChain>
           </folderInfo>
           <sourceEntries>
-            <entry excluding="Startup/startup_ch32v30x_D8.S|Driver/i2c_Sofe|Driver/inc/oledfont.h|Driver/inc/codetab.h|Driver/src/Driver_TIM4.c|Driver/src/Driver_TIM5.c|Driver/src/Driver_TIM6.c|Driver/src/Driver_LED.c|Driver/inc/Driver_TIM4.h|Driver/inc/Driver_LED.h|Driver/inc/Driver_Key.h|Driver/inc/Driver_TIM5.h|Driver/inc/Driver_TIM6.h|Driver/src/Driver_Key.c|Fuation/src/oled.c|Fuation/src/word.c|Fuation/src/esp32.c|Fuation/inc/esp32.h|Fuation/inc/oled.h|Fuation/inc/word.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+            <entry excluding="Startup/startup_ch32v30x_D8.S|Driver/i2c_Sofe|Driver/inc/oledfont.h|Driver/inc/codetab.h|Driver/src/Driver_TIM4.c|Driver/src/Driver_TIM5.c|Driver/src/Driver_TIM6.c|Driver/src/Driver_LED.c|Driver/inc/Driver_TIM4.h|Driver/inc/Driver_LED.h|Driver/inc/Driver_Key.h|Driver/inc/Driver_TIM5.h|Driver/inc/Driver_TIM6.h|Driver/src/Driver_Key.c|Fuation/src/oled.c|Fuation/src/word.c|Fuation/src/esp32.c|Fuation/inc/esp32.h|Fuation/inc/oled.h|Fuation/inc/word.h|Fuation/inc/bmp.h|User/kalman.c|User/kalman.h|Driver/src/Driver_I2C2.c|Driver/inc/Driver_I2C2.h|Fuation/inc/atk_ms6050.h|Fuation/inc/inv_mpu_dmp_motion_driver.h|Fuation/inc/inv_mpu.h|Fuation/inc/dmpKey.h|Fuation/inc/dmpmap.h|Fuation/src/atk_ms6050.c|Fuation/src/inv_mpu_dmp_motion_driver.c|Fuation/src/inv_mpu.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
           </sourceEntries>
         </configuration>
       </storageModule>

@@ -10,8 +10,8 @@
 void Driver_I2C2_Init(void)
 {
     /*
-        PB6->SCL
-        PB7->SDA
+        PB8->SCL
+        PB9->SDA
             开漏输出: 既可以用于输出也可以输入. 外界要有上拉电阻.
                     用于输入的时候,最好先输出一个1,把线的控制权交给外界.
 
@@ -19,8 +19,8 @@ void Driver_I2C2_Init(void)
 
      */
     RCC->APB2PCENR |= RCC_IOPBEN;
-    GPIOB->CFGLR |= (GPIO_CFGLR_MODE6 | GPIO_CFGLR_MODE7 | GPIO_CFGLR_CNF6_0 | GPIO_CFGLR_CNF7_0);
-    GPIOB->CFGLR &= ~(GPIO_CFGLR_CNF6_1 | GPIO_CFGLR_CNF7_1);
+    GPIOB->CFGHR |= (GPIO_CFGHR_MODE8 | GPIO_CFGHR_MODE9 | GPIO_CFGHR_CNF8_0 | GPIO_CFGHR_CNF9_0);
+    GPIOB->CFGHR &= ~(GPIO_CFGHR_CNF8_1 | GPIO_CFGHR_CNF9_1);
 }
 
 /**
@@ -254,3 +254,4 @@ uint8_t Driver_I2C_ReadByteAck(uint8_t ack)
 
     return data;
 }
+

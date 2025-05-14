@@ -59,7 +59,20 @@
 					"${project}/Fuation/src/esp32.c",
 					"${project}/Fuation/inc/esp32.h",
 					"${project}/Fuation/inc/oled.h",
-					"${project}/Fuation/inc/word.h"
+					"${project}/Fuation/inc/word.h",
+					"${project}/Fuation/inc/bmp.h",
+					"${project}/User/kalman.c",
+					"${project}/User/kalman.h",
+					"${project}/Driver/src/Driver_I2C2.c",
+					"${project}/Driver/inc/Driver_I2C2.h",
+					"${project}/Fuation/inc/atk_ms6050.h",
+					"${project}/Fuation/inc/inv_mpu_dmp_motion_driver.h",
+					"${project}/Fuation/inc/inv_mpu.h",
+					"${project}/Fuation/inc/dmpKey.h",
+					"${project}/Fuation/inc/dmpmap.h",
+					"${project}/Fuation/src/atk_ms6050.c",
+					"${project}/Fuation/src/inv_mpu_dmp_motion_driver.c",
+					"${project}/Fuation/src/inv_mpu.c"
 				],
 				"riscvTargetProcessor": {
 					"architecture": "rv32i",
