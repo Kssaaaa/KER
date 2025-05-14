@@ -59,7 +59,8 @@
 					"${project}/Fuation/src/esp32.c",
 					"${project}/Fuation/inc/esp32.h",
 					"${project}/Fuation/inc/oled.h",
-					"${project}/Fuation/inc/word.h"
+					"${project}/Fuation/inc/word.h",
+					"${project}/Fuation/inc/bmp.h"
 				],
 				"riscvTargetProcessor": {
 					"architecture": "rv32i",

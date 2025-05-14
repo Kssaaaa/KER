@@ -26,13 +26,15 @@
 
 /* 引脚定义 */
 #define ATK_MS6050_AD0_GPIO_PORT            GPIOA
-#define ATK_MS6050_AD0_GPIO_PIN             GPIO_PIN_11
+#define ATK_MS6050_AD0_GPIO_RCC             RCC_APB2Periph_GPIOA
+#define ATK_MS6050_AD0_GPIO_PIN             GPIO_Pin_11
 /* PA15需禁用JTAG才能做普通IO */
 
 #define delay_ms Delay_Ms
 /* IO操作 */
-
-
+#define ATK_MS6050_AD0_GPIO_CLK_ENABLE()      RCC_APB2PeriphClockCmd(ATK_MS6050_AD0_GPIO_RCC,ENABLE)
+#define ATK_MS6050_AD0_0()                    GPIO_WriteBit(ATK_MS6050_AD0_GPIO_PORT,ATK_MS6050_AD0_GPIO_PIN,0)
+#define ATK_MS6050_AD0_1()                    GPIO_WriteBit(ATK_MS6050_AD0_GPIO_PORT,ATK_MS6050_AD0_GPIO_PIN,1)                   
 /* ATK-MS6050的IIC通讯从机地址
  * 如果ATK-MS6050的AD0引脚被拉低，则其IIC通讯的地址为0x68
  * 如果ATK-MS6050的AD0引脚被拉高，则其IIC通讯的地址为0x69

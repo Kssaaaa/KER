@@ -28,37 +28,22 @@
  */
 static void atk_ms6050_hw_init(void)
 {
-    // GPIO_InitTypeDef gpio_init_struct = {0};
+    GPIO_InitTypeDef gpio_init_struct = {0};
     
     /* 使能AD0引脚GPIO的时钟 */
     //AD0->PA12
-    // ATK_MS6050_AD0_GPIO_CLK_ENABLE();
+    ATK_MS6050_AD0_GPIO_CLK_ENABLE();
     
     // /* 初始化AD0引脚 */
-    // gpio_init_struct.GPIO_Pin    = ATK_MS6050_AD0_GPIO_PIN;  /* AD0引脚 */
-    // gpio_init_struct.GPIO_Mode   = GPIO_Mode_Out_PP;      /* 推挽输出 */     
-    // gpio_init_struct.GPIO_Speed  = GPIO_Speed_50MHz;     /* 高速 */
-    // GPIO_Init(ATK_MS6050_AD0_GPIO_PORT, &gpio_init_struct);
+    gpio_init_struct.GPIO_Pin    = ATK_MS6050_AD0_GPIO_PIN;  /* AD0引脚 */
+    gpio_init_struct.GPIO_Mode   = GPIO_Mode_Out_PP;      /* 推挽输出 */     
+    gpio_init_struct.GPIO_Speed  = GPIO_Speed_50MHz;     /* 高速 */
+    GPIO_Init(ATK_MS6050_AD0_GPIO_PORT, &gpio_init_struct);
     
-    // /* 控制ATK-MS6050的AD0引脚为低电平
-    //  * 设置其IIC的从机地址为0x68
-    //  */
-    // ATK_MS6050_AD0(0);
-
-     /* 1. 开启时钟 */
-         //AD0->PA12
-    /* 1.1  GPIOA*/
-    RCC->APB2PCENR |= RCC_IOPAEN;
-    /* 1.2  AFIO*/
-    RCC->APB2PCENR |= RCC_AFIOEN;
-
-    /* 2. 给用到的端口的所有 PIN (PA11) 设置工作模式: 通用推挽输出 MODE:11 CNF:00 */
-    GPIOA->CFGHR |= GPIO_CFGHR_MODE11;
-    GPIOA->CFGHR &= ~GPIO_CFGHR_CNF11;
-    /* 3. AD0设置为低电平*/
-    GPIOA->OUTDR &= ~GPIO_OUTDR_ODR11;
-
-
+     /* 控制ATK-MS6050的AD0引脚为低电平
+      * 设置其IIC的从机地址为0x68
+      */
+     ATK_MS6050_AD0_0();
 }
 
 /**

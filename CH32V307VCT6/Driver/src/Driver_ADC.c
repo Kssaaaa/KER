@@ -32,5 +32,5 @@ void Driver_ADC_Init(void)
     ADC_StartCalibration(ADC1);
     while(ADC_GetCalibrationStatus(ADC1));
 
-
+    
 }

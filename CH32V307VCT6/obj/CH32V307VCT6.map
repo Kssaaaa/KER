@@ -869,8 +869,6 @@ Discarded input sections
                 0x0000000000000000        0x4 ./Peripheral/src/ch32v30x_gpio.o
  .text.GPIO_ResetBits
                 0x0000000000000000        0x4 ./Peripheral/src/ch32v30x_gpio.o
- .text.GPIO_WriteBit
-                0x0000000000000000        0xa ./Peripheral/src/ch32v30x_gpio.o
  .text.GPIO_Write
                 0x0000000000000000        0x4 ./Peripheral/src/ch32v30x_gpio.o
  .text.GPIO_PinLockConfig
@@ -2603,75 +2601,78 @@ END GROUP
  .text.GPIO_ReadInputDataBit
                 0x0000000000000704        0xa ./Peripheral/src/ch32v30x_gpio.o
                 0x0000000000000704                GPIO_ReadInputDataBit
+ .text.GPIO_WriteBit
+                0x000000000000070e        0xa ./Peripheral/src/ch32v30x_gpio.o
+                0x000000000000070e                GPIO_WriteBit
  .text.NVIC_PriorityGroupConfig
-                0x000000000000070e        0x6 ./Peripheral/src/ch32v30x_misc.o
-                0x000000000000070e                NVIC_PriorityGroupConfig
+                0x0000000000000718        0x6 ./Peripheral/src/ch32v30x_misc.o
+                0x0000000000000718                NVIC_PriorityGroupConfig
  .text.RCC_GetClocksFreq
-                0x0000000000000714      0x176 ./Peripheral/src/ch32v30x_rcc.o
-                0x0000000000000714                RCC_GetClocksFreq
+                0x000000000000071e      0x176 ./Peripheral/src/ch32v30x_rcc.o
+                0x000000000000071e                RCC_GetClocksFreq
  .text.RCC_APB2PeriphClockCmd
-                0x000000000000088a       0x1e ./Peripheral/src/ch32v30x_rcc.o
-                0x000000000000088a                RCC_APB2PeriphClockCmd
+                0x0000000000000894       0x1e ./Peripheral/src/ch32v30x_rcc.o
+                0x0000000000000894                RCC_APB2PeriphClockCmd
  .text.TIM_GetITStatus
-                0x00000000000008a8       0x18 ./Peripheral/src/ch32v30x_tim.o
-                0x00000000000008a8                TIM_GetITStatus
+                0x00000000000008b2       0x18 ./Peripheral/src/ch32v30x_tim.o
+                0x00000000000008b2                TIM_GetITStatus
  .text.TIM_ClearITPendingBit
-                0x00000000000008c0        0xc ./Peripheral/src/ch32v30x_tim.o
-                0x00000000000008c0                TIM_ClearITPendingBit
+                0x00000000000008ca        0xc ./Peripheral/src/ch32v30x_tim.o
+                0x00000000000008ca                TIM_ClearITPendingBit
  .text.USART_Init
-                0x00000000000008cc       0x8c ./Peripheral/src/ch32v30x_usart.o
-                0x00000000000008cc                USART_Init
+                0x00000000000008d6       0x8c ./Peripheral/src/ch32v30x_usart.o
+                0x00000000000008d6                USART_Init
  .text.USART_Cmd
-                0x0000000000000958       0x16 ./Peripheral/src/ch32v30x_usart.o
-                0x0000000000000958                USART_Cmd
+                0x0000000000000962       0x16 ./Peripheral/src/ch32v30x_usart.o
+                0x0000000000000962                USART_Cmd
  .text.USART_SendData
-                0x000000000000096e        0x8 ./Peripheral/src/ch32v30x_usart.o
-                0x000000000000096e                USART_SendData
+                0x0000000000000978        0x8 ./Peripheral/src/ch32v30x_usart.o
+                0x0000000000000978                USART_SendData
  .text.USART_GetFlagStatus
-                0x0000000000000976        0xa ./Peripheral/src/ch32v30x_usart.o
-                0x0000000000000976                USART_GetFlagStatus
+                0x0000000000000980        0xa ./Peripheral/src/ch32v30x_usart.o
+                0x0000000000000980                USART_GetFlagStatus
  .text.atk_ms6050_write
-                0x0000000000000980       0x54 ./Fuation/src/atk_ms6050.o
-                0x0000000000000980                atk_ms6050_write
+                0x000000000000098a       0x56 ./Fuation/src/atk_ms6050.o
+                0x000000000000098a                atk_ms6050_write
  .text.atk_ms6050_write_byte
-                0x00000000000009d4       0x16 ./Fuation/src/atk_ms6050.o
-                0x00000000000009d4                atk_ms6050_write_byte
+                0x00000000000009e0       0x16 ./Fuation/src/atk_ms6050.o
+                0x00000000000009e0                atk_ms6050_write_byte
  .text.atk_ms6050_read
-                0x00000000000009ea       0x68 ./Fuation/src/atk_ms6050.o
-                0x00000000000009ea                atk_ms6050_read
+                0x00000000000009f6       0x68 ./Fuation/src/atk_ms6050.o
+                0x00000000000009f6                atk_ms6050_read
  .text.atk_ms6050_read_byte
-                0x0000000000000a52        0xe ./Fuation/src/atk_ms6050.o
-                0x0000000000000a52                atk_ms6050_read_byte
+                0x0000000000000a5e        0xe ./Fuation/src/atk_ms6050.o
+                0x0000000000000a5e                atk_ms6050_read_byte
  .text.atk_ms6050_sw_reset
-                0x0000000000000a60       0x2a ./Fuation/src/atk_ms6050.o
-                0x0000000000000a60                atk_ms6050_sw_reset
+                0x0000000000000a6c       0x2a ./Fuation/src/atk_ms6050.o
+                0x0000000000000a6c                atk_ms6050_sw_reset
  .text.atk_ms6050_set_gyro_fsr
-                0x0000000000000a8a       0x18 ./Fuation/src/atk_ms6050.o
-                0x0000000000000a8a                atk_ms6050_set_gyro_fsr
+                0x0000000000000a96       0x18 ./Fuation/src/atk_ms6050.o
+                0x0000000000000a96                atk_ms6050_set_gyro_fsr
  .text.atk_ms6050_set_accel_fsr
-                0x0000000000000aa2       0x18 ./Fuation/src/atk_ms6050.o
-                0x0000000000000aa2                atk_ms6050_set_accel_fsr
+                0x0000000000000aae       0x18 ./Fuation/src/atk_ms6050.o
+                0x0000000000000aae                atk_ms6050_set_accel_fsr
  .text.atk_ms6050_set_lpf
-                0x0000000000000aba       0x40 ./Fuation/src/atk_ms6050.o
-                0x0000000000000aba                atk_ms6050_set_lpf
+                0x0000000000000ac6       0x40 ./Fuation/src/atk_ms6050.o
+                0x0000000000000ac6                atk_ms6050_set_lpf
  .text.atk_ms6050_set_rate
-                0x0000000000000afa       0x4a ./Fuation/src/atk_ms6050.o
-                0x0000000000000afa                atk_ms6050_set_rate
+                0x0000000000000b06       0x4a ./Fuation/src/atk_ms6050.o
+                0x0000000000000b06                atk_ms6050_set_rate
  .text.atk_ms6050_get_temperature
-                0x0000000000000b44       0x5c ./Fuation/src/atk_ms6050.o
-                0x0000000000000b44                atk_ms6050_get_temperature
+                0x0000000000000b50       0x5c ./Fuation/src/atk_ms6050.o
+                0x0000000000000b50                atk_ms6050_get_temperature
  .text.atk_ms6050_get_gyroscope
-                0x0000000000000ba0       0x42 ./Fuation/src/atk_ms6050.o
-                0x0000000000000ba0                atk_ms6050_get_gyroscope
+                0x0000000000000bac       0x42 ./Fuation/src/atk_ms6050.o
+                0x0000000000000bac                atk_ms6050_get_gyroscope
  .text.atk_ms6050_get_accelerometer
-                0x0000000000000be2       0x42 ./Fuation/src/atk_ms6050.o
-                0x0000000000000be2                atk_ms6050_get_accelerometer
+                0x0000000000000bee       0x42 ./Fuation/src/atk_ms6050.o
+                0x0000000000000bee                atk_ms6050_get_accelerometer
  .text.atk_ms6050_init
-                0x0000000000000c24       0xcc ./Fuation/src/atk_ms6050.o
-                0x0000000000000c24                atk_ms6050_init
+                0x0000000000000c30       0xbe ./Fuation/src/atk_ms6050.o
+                0x0000000000000c30                atk_ms6050_init
  .text.Read_Encoders
-                0x0000000000000cf0       0x7a ./Driver/src/Driver_Encoder.o
-                0x0000000000000cf0                Read_Encoders
+                0x0000000000000cee       0x7c ./Driver/src/Driver_Encoder.o
+                0x0000000000000cee                Read_Encoders
  .text.TIM2_IRQHandler
                 0x0000000000000d6a       0x8c ./Driver/src/Driver_Encoder.o
                 0x0000000000000d6a                TIM2_IRQHandler
@@ -2843,6 +2844,7 @@ END GROUP
                 0x0000000000002d14                _read
  *(.rodata)
  *(.rodata*)
+ *fill*         0x0000000000002d20        0x0 
  .rodata.main.str1.4
                 0x0000000000002d20       0xc4 ./User/main.o
  .rodata.atk_ms6050_get_temperature.cst4
@@ -3048,7 +3050,7 @@ END GROUP
                 0x0000000020008000                PROVIDE (_eusrstack = .)
 OUTPUT(CH32V307VCT6.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0xf59e
+.debug_info     0x0000000000000000     0xf645
  .debug_info    0x0000000000000000      0xbc0 ./User/ch32v30x_it.o
  .debug_info    0x0000000000000bc0      0xb5e ./User/main.o
  .debug_info    0x000000000000171e      0xbb5 ./User/system_ch32v30x.o
@@ -3058,13 +3060,13 @@ OUTPUT(CH32V307VCT6.elf elf32-littleriscv)
  .debug_info    0x00000000000044ff     0x158a ./Peripheral/src/ch32v30x_rcc.o
  .debug_info    0x0000000000005a89     0x2a32 ./Peripheral/src/ch32v30x_tim.o
  .debug_info    0x00000000000084bb     0x13cd ./Peripheral/src/ch32v30x_usart.o
- .debug_info    0x0000000000009888     0x1345 ./Fuation/src/atk_ms6050.o
- .debug_info    0x000000000000abcd     0x1401 ./Driver/src/Driver_Encoder.o
- .debug_info    0x000000000000bfce      0xdec ./Driver/src/Driver_I2C2.o
- .debug_info    0x000000000000cdba     0x139b ./Driver/src/Driver_USART.o
- .debug_info    0x000000000000e155     0x1449 ./Debug/debug.o
+ .debug_info    0x0000000000009888     0x13ec ./Fuation/src/atk_ms6050.o
+ .debug_info    0x000000000000ac74     0x1401 ./Driver/src/Driver_Encoder.o
+ .debug_info    0x000000000000c075      0xdec ./Driver/src/Driver_I2C2.o
+ .debug_info    0x000000000000ce61     0x139b ./Driver/src/Driver_USART.o
+ .debug_info    0x000000000000e1fc     0x1449 ./Debug/debug.o
 
-.debug_abbrev   0x0000000000000000     0x280d
+.debug_abbrev   0x0000000000000000     0x2850
  .debug_abbrev  0x0000000000000000      0x22c ./User/ch32v30x_it.o
  .debug_abbrev  0x000000000000022c      0x248 ./User/main.o
  .debug_abbrev  0x0000000000000474      0x2c0 ./User/system_ch32v30x.o
@@ -3074,11 +3076,11 @@ OUTPUT(CH32V307VCT6.elf elf32-littleriscv)
  .debug_abbrev  0x0000000000000d43      0x351 ./Peripheral/src/ch32v30x_rcc.o
  .debug_abbrev  0x0000000000001094      0x408 ./Peripheral/src/ch32v30x_tim.o
  .debug_abbrev  0x000000000000149c      0x312 ./Peripheral/src/ch32v30x_usart.o
- .debug_abbrev  0x00000000000017ae      0x3b9 ./Fuation/src/atk_ms6050.o
- .debug_abbrev  0x0000000000001b67      0x2d0 ./Driver/src/Driver_Encoder.o
- .debug_abbrev  0x0000000000001e37      0x2b7 ./Driver/src/Driver_I2C2.o
- .debug_abbrev  0x00000000000020ee      0x352 ./Driver/src/Driver_USART.o
- .debug_abbrev  0x0000000000002440      0x3cd ./Debug/debug.o
+ .debug_abbrev  0x00000000000017ae      0x3fc ./Fuation/src/atk_ms6050.o
+ .debug_abbrev  0x0000000000001baa      0x2d0 ./Driver/src/Driver_Encoder.o
+ .debug_abbrev  0x0000000000001e7a      0x2b7 ./Driver/src/Driver_I2C2.o
+ .debug_abbrev  0x0000000000002131      0x352 ./Driver/src/Driver_USART.o
+ .debug_abbrev  0x0000000000002483      0x3cd ./Debug/debug.o
 
 .debug_aranges  0x0000000000000000      0x8c0
  .debug_aranges
@@ -3126,7 +3128,7 @@ OUTPUT(CH32V307VCT6.elf elf32-littleriscv)
  .debug_ranges  0x0000000000000878       0x70 ./Driver/src/Driver_USART.o
  .debug_ranges  0x00000000000008e8       0x58 ./Debug/debug.o
 
-.debug_line     0x0000000000000000     0xb403
+.debug_line     0x0000000000000000     0xb46d
  .debug_line    0x0000000000000000      0x2e1 ./User/ch32v30x_it.o
  .debug_line    0x00000000000002e1      0x50b ./User/main.o
  .debug_line    0x00000000000007ec      0x910 ./User/system_ch32v30x.o
@@ -3136,13 +3138,13 @@ OUTPUT(CH32V307VCT6.elf elf32-littleriscv)
  .debug_line    0x0000000000002887     0x19ab ./Peripheral/src/ch32v30x_rcc.o
  .debug_line    0x0000000000004232     0x3318 ./Peripheral/src/ch32v30x_tim.o
  .debug_line    0x000000000000754a      0xf18 ./Peripheral/src/ch32v30x_usart.o
- .debug_line    0x0000000000008462      0xb02 ./Fuation/src/atk_ms6050.o
- .debug_line    0x0000000000008f64      0x825 ./Driver/src/Driver_Encoder.o
- .debug_line    0x0000000000009789      0x895 ./Driver/src/Driver_I2C2.o
- .debug_line    0x000000000000a01e      0xb77 ./Driver/src/Driver_USART.o
- .debug_line    0x000000000000ab95      0x86e ./Debug/debug.o
+ .debug_line    0x0000000000008462      0xb6c ./Fuation/src/atk_ms6050.o
+ .debug_line    0x0000000000008fce      0x825 ./Driver/src/Driver_Encoder.o
+ .debug_line    0x00000000000097f3      0x895 ./Driver/src/Driver_I2C2.o
+ .debug_line    0x000000000000a088      0xb77 ./Driver/src/Driver_USART.o
+ .debug_line    0x000000000000abff      0x86e ./Debug/debug.o
 
-.debug_str      0x0000000000000000     0x2c63
+.debug_str      0x0000000000000000     0x2c74
  .debug_str     0x0000000000000000      0x5fb ./User/ch32v30x_it.o
                                         0x676 (size before relaxing)
  .debug_str     0x00000000000005fb       0xf7 ./User/main.o
@@ -3161,15 +3163,15 @@ OUTPUT(CH32V307VCT6.elf elf32-littleriscv)
                                        0x1277 (size before relaxing)
  .debug_str     0x00000000000023cb      0x3f5 ./Peripheral/src/ch32v30x_usart.o
                                         0xaeb (size before relaxing)
- .debug_str     0x00000000000027c0      0x16d ./Fuation/src/atk_ms6050.o
-                                        0x816 (size before relaxing)
- .debug_str     0x000000000000292d      0x113 ./Driver/src/Driver_Encoder.o
+ .debug_str     0x00000000000027c0      0x17e ./Fuation/src/atk_ms6050.o
+                                        0x901 (size before relaxing)
+ .debug_str     0x000000000000293e      0x113 ./Driver/src/Driver_Encoder.o
                                        0x104b (size before relaxing)
- .debug_str     0x0000000000002a40       0x5a ./Driver/src/Driver_I2C2.o
+ .debug_str     0x0000000000002a51       0x5a ./Driver/src/Driver_I2C2.o
                                         0x708 (size before relaxing)
- .debug_str     0x0000000000002a9a      0x11a ./Driver/src/Driver_USART.o
+ .debug_str     0x0000000000002aab      0x11a ./Driver/src/Driver_USART.o
                                         0xfb2 (size before relaxing)
- .debug_str     0x0000000000002bb4       0xaf ./Debug/debug.o
+ .debug_str     0x0000000000002bc5       0xaf ./Debug/debug.o
                                         0xee2 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
